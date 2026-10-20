@@ -845,7 +845,7 @@ namespace grove {
     }
 
 
-    function waitAtResponse(target1: string, target2: string, target3: string, timeout: number) {
+   export function waitAtResponse(target1: string, target2: string, target3: string, timeout: number) {
         let buffer = ""
         let start = input.runningTime()
 
@@ -862,7 +862,7 @@ namespace grove {
         return 0
     }
 
-    function sendAtCmd(cmd: string) {
+   export function sendAtCmd(cmd: string) {
         serial.writeString(cmd + "\u000D\u000A")
     }
 }
